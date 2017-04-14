@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>gerenciador</display-name>
+	<filter>
+	   <filter-name>validacao</filter-name>
+	   <filter-class>br.com.alura.gerenciador.web.filtroDeAuditoria</filter-class>	 
+	</filter>
+	<filter-mapping>
+	  <filter-name>validacao</filter-name>
+	  <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+	   <servlet-name>Controlador</servlet-name>
+	   <servlet-class>br.com.alura.gerenciador.web.Controlador</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>Controlador</servlet-name>
+	    <url-pattern>/Controlador</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	   <servlet-name>buscaEmpresa</servlet-name>	   	   
+	   <servlet-class>br.com.alura.gerenciador.web.BuscaEmpresa</servlet-class>	   	                  
+	</servlet>
+	<servlet>
+	   <servlet-name>adicionar</servlet-name>
+	   <servlet-class>br.com.alura.gerenciador.web.NovaEmpresa</servlet-class>
+	</servlet>
+	<servlet>
+	   <servlet-name>login</servlet-name>
+	   <servlet-class>br.com.alura.gerenciador.web.Login</servlet-class>
+	</servlet>
+	<servlet>
+	  <servlet-name>logout</servlet-name>
+	  <servlet-class>br.com.alura.gerenciador.web.logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>logout</servlet-name>
+	   <url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>login</servlet-name>
+	    <url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>adicionar</servlet-name>
+	    <url-pattern>/NovaEmpresa</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	   <servlet-name>buscaEmpresa</servlet-name>
+	   <url-pattern>/BuscaEmpresa</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+</web-app>

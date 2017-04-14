@@ -1,0 +1,30 @@
+#dadoAcesso{
+	margin-left:40%;
+}
+#tituloLogin{
+	text-align: center;
+}
+#camposLogin{
+	margin-top:58px;
+}
+#labelEmail{
+	margin-left:34%
+}
+#email{
+	width:350px;
+	margin-left:40%;
+	margin-top:-31px;
+}
+#labelSenha{
+	margin-left:34%;
+	margin-top:19px;
+}
+#senha{
+	width:100px;
+	margin-left:40%;
+	margin-top:-36px;
+}
+#logar{
+	margin-left:40%;
+	margin-top:10px;
+}
